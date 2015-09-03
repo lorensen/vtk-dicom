@@ -269,6 +269,7 @@ endif()
 install(FILES Copyright.txt
   DESTINATION ${DICOM_DATA_INSTALL_DEST})
 
+if (NOT Module_vtkDICOM)
 #---------------------------------------------------
 # Export information for other projects
 
@@ -317,3 +318,4 @@ install(FILES
 # Install the export set for use with the install-tree
 install(EXPORT DICOMTargets
   DESTINATION "${DICOM_CMAKE_INSTALL_DEST}" COMPONENT Development)
+endif()
